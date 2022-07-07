@@ -1,0 +1,17 @@
+.Navbar {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  background-color: black;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  align-items: baseline;
+}
+
+.Navbar-brand {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  margin-right: auto;
+}

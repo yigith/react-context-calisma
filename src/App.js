@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import AppContext from './AppContext';
+import Content from './Content';
+import Navbar from './Navbar';
 
 function App() {
+  const [userName, setUserName] = useState("Sienna Princess");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContext.Provider value={{ userName, setUserName }}>
+      <div className="App">
+        <Navbar />
+        <Content />
+      </div>
+    </AppContext.Provider>
   );
 }
 
